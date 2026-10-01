@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "author": "Ana Carolina Dutra",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-s3-devkitc-1",
+      "id": "esp",
+      "top": 38.22,
+      "left": -5.03,
+      "attrs": { "builder": "esp-idf" }
+    },
+    { "type": "board-bmp180", "id": "bmp1", "top": 168.64, "left": -124.54, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "bmp1:GND", "esp:GND.1", "black", [ "h28.8", "v86.59" ] ],
+    [ "bmp1:3.3V", "esp:3V3.1", "red", [ "h38.4", "v-143.81" ] ],
+    [ "bmp1:SCL", "esp:8", "magenta", [ "h48", "v-19.01" ] ],
+    [ "bmp1:SDA", "esp:9", "blue", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}

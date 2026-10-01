@@ -1,0 +1,7 @@
+dependencies:
+  esp-idf-lib/esp_idf_lib_helpers: "*"
+  esp-idf-lib/i2cdev: "*"
+
+description: Driver BMP180 local com correção da leitura bruta de temperatura
+license: MIT
+version: 1.0.7-local
