@@ -38,15 +38,12 @@ O circuito de simulação está em [`diagram.json`](diagram.json).
 ```text
 .
 ├── components/bmp180/              # Driver local corrigido e licença MIT
-├── docs/Altitude-esp32.png          # Registro da execução no Wokwi
 ├── main/
 │   ├── main.cc                      # Sensor, laço e saída serial
 │   ├── altitude_model.cc/.h         # Pré e pós-processamento e inferência
 │   ├── model_data.cc/.h             # Modelo incorporado ao firmware
 │   └── extra_altitude_normalization.h
 ├── model/extra_altitude_int8.tflite
-├── notebook/extra_altitude_500_rodado.ipynb
-├── RELATORIO.md
 ├── diagram.json
 └── wokwi.toml
 ```
@@ -119,13 +116,8 @@ constituem um teste válido do modelo.
 A saída também possui resolução aproximada de `17,32 m` por nível `int8`.
 Pequenas mudanças podem, portanto, produzir a mesma altitude impressa.
 
-## Notebook e modelo
+## Modelo
 
-O notebook final executado está em
-[`notebook/extra_altitude_500_rodado.ipynb`](notebook/extra_altitude_500_rodado.ipynb).
-Ele coleta dados públicos, faz a exploração e limpeza, separa cidades sem
-misturar treino e teste, normaliza usando somente o treino, treina o modelo e
-gera o arquivo quantizado e os cabeçalhos usados pelo firmware.
 
 O modelo binário original está em
 [`model/extra_altitude_int8.tflite`](model/extra_altitude_int8.tflite). A cópia
@@ -142,5 +134,3 @@ continuam utilizando `int16_t`.
 O componente preserva os avisos originais e a licença MIT no arquivo
 [`components/bmp180/LICENSE`](components/bmp180/LICENSE).
 
-Para detalhes sobre dataset, métricas, firmware e limitações, consulte
-[`RELATORIO.md`](RELATORIO.md).
