@@ -46,7 +46,6 @@ O circuito de simulação está em [`diagram.json`](diagram.json).
 │   └── extra_altitude_normalization.h
 ├── model/extra_altitude_int8.tflite
 ├── notebook/extra_altitude_500_rodado.ipynb
-├── RELATORIO.md
 ├── diagram.json
 └── wokwi.toml
 ```
@@ -142,5 +141,3 @@ continuam utilizando `int16_t`.
 O componente preserva os avisos originais e a licença MIT no arquivo
 [`components/bmp180/LICENSE`](components/bmp180/LICENSE).
 
-Para detalhes sobre dataset, métricas, firmware e limitações, consulte
-[`RELATORIO.md`](RELATORIO.md).
