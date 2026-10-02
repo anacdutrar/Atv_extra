@@ -45,7 +45,7 @@ O circuito de simulação está em [`diagram.json`](diagram.json).
 │   ├── model_data.cc/.h             # Modelo incorporado ao firmware
 │   └── extra_altitude_normalization.h
 ├── model/extra_altitude_int8.tflite
-├── notebook/extra_altitude_500_rodado.ipynb
+├── notebook/extra_altitude_500.ipynb
 ├── diagram.json
 └── wokwi.toml
 ```
@@ -121,7 +121,7 @@ Pequenas mudanças podem, portanto, produzir a mesma altitude impressa.
 ## Notebook e modelo
 
 O notebook final executado está em
-[`notebook/extra_altitude_500_rodado.ipynb`](notebook/extra_altitude_500_rodado.ipynb).
+[`notebook/extra_altitude_500_rodado.ipynb`](notebook/extra_altitude_500.ipynb).
 Ele coleta dados públicos, faz a exploração e limpeza, separa cidades sem
 misturar treino e teste, normaliza usando somente o treino, treina o modelo e
 gera o arquivo quantizado e os cabeçalhos usados pelo firmware.
